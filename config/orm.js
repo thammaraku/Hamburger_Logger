@@ -1,6 +1,6 @@
 // Import connection.js
 
-var connection = require("./connection.js");
+var connection = require("../config/connection.js");
 
 
 // Object Relational Mapper (ORM)
