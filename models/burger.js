@@ -17,7 +17,7 @@ var burger = {
     },
 
     updateOnce: function(cb) {
-        orm.updateOnce("burgers", valOfCol, condition, function(result) {
+        orm.updateOne("burgers", valOfCol, condition, function(result) {
             cb(result);
         });
 

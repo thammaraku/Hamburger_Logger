@@ -43,7 +43,7 @@ var orm = {
     },
 
 
-    updateOnce: function (tableInput, valOfCol, condition, cb) {
+    updateOne: function (tableInput, valOfCol, condition, cb) {
 
         var queryString = "UPDATE ?? SET ?? WHERE ?";
 
