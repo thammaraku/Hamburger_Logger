@@ -1,13 +1,12 @@
 // Use router to create new router object to handle requests
-var express = require('express');
-var router = express.Router;
+var express = require("express");
+var router = express.Router();
 
 // Import model to use its databas function
 var burger = require("../models/burger.js");
 
 
 router.get("/", function(req, res) {
-
     burger.selectAll(function(data) {
         var handleBarsObject = {
             burgers: data
