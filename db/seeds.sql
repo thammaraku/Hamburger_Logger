@@ -1,0 +1,1 @@
+INSERT INTO burgers (burger_name) VALUES ('The Madlove Burger'), ('The Southern Charm Burger'), ('The Master Cheese'); 
