@@ -1,5 +1,5 @@
 // Import connection.js
-var connection = require("../config/connection.js");
+var connection = require("./connection");
 
 
 // Object Relational Mapper (ORM)
@@ -45,6 +45,7 @@ var orm = {
     updateOne: function (tableInput, valOfCol, condition, cb) {
 
         var queryString = "UPDATE ?? SET ?? WHERE ?";
+        console.log("updateOne queryString = " + queryString);
 
         // CALVIN CODE TO RETURN
         // var queryString = "UPDATE " + table;
