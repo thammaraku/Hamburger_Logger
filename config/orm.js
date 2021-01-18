@@ -53,27 +53,29 @@ var orm = {
         var queryString = "SELECT * FROM ??;";
         connection.query(queryString, [tableInput], function (err, result) {
             if (err) throw err;
-            console.table(result);
+            // console.table(result);
             cb(result);
         });
     },
 
     insertOne: function (tableInput, colToAdd, valOfCol, cb) {
-        var queryString = "INSERT INTO ?? (??) VALUES (?)";
 
+        console.log(tableInput);
+        console.log(colToAdd);
+        console.log(valOfCol);
 
-        // CALVIN CODE TO RETURN
-        // var queryString = "INSERT INTO " + table;
-        // queryString += " (";
-        // queryString += cols.toString();
-        // queryString += ") ";
-        // queryString += "VALUES (";
-        // queryString += printQuestionMarks(vals.length);
-        // queryString += ") ";
+        var queryString = "INSERT INTO " + tableInput;
 
-        // console.log(queryString);
+        queryString += " (";
+        queryString += colToAdd.toString();
+        queryString += ") ";
+        queryString += "VALUES (";
+        queryString += printQuestionMarks(valOfCol.length);
+        queryString += ") ";
+    
+        console.log(queryString);
 
-        connection.query(queryString, [tableInput, colToAdd, valOfCol], function (err, result) {
+        connection.query(queryString, valOfCol, function (err, result) {
             if (err) throw err;
             console.table(result);
             cb(result);
@@ -86,7 +88,7 @@ var orm = {
         console.log(tableInput);
         console.log(valOfCol);
         console.log(condition);
-        
+
         var queryString = "UPDATE " + tableInput;
 
         queryString += " SET ";
@@ -101,7 +103,23 @@ var orm = {
             console.table(result);
             cb(result);
         });
+    },
+
+    deleteOne: function (tableInput, condition, cb) {
+
+        console.log(tableInput);
+        console.log(condition);
+
+        var queryString = "DELETE FROM " + tableInput;
+        queryString += " WHERE ";
+        queryString += condition;
+    
+        connection.query(queryString, function(err, result) {
+            if (err) throw err;
+            cb(result);
+        });
     }
+
 };
 
 

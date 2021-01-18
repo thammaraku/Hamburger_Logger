@@ -20,7 +20,12 @@ var burger = {
         orm.updateOne("burgers", valOfCol, condition, function(result) {
             cb(result);
         });
+    },
 
+    deleteOne: function(condition, cb) {
+        orm.deleteOne("burgers", condition, function(result) {
+            cb(result);
+        });
     }
 
 };
