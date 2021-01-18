@@ -1,9 +1,13 @@
 <li>
 	{{burger_name}}
+	
+	{{#if devour}}
 
 	<button class="change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
-		{{#if devour}}DEVOUR!{{else}}WAKEUP!{{/if}}
+		DEVOUR!
 	</button>
+
+	{{/if}}
 
 
 {{!-- ADD DELETE BUTTON -- HIDE DATA ID UNDER DATA ATTRIBUTE WITH HANDLEBAR ID --}}
