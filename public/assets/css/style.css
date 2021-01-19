@@ -21,7 +21,8 @@ li {
   }
 
   body {
-    background-color: tomato;
+    /* background-color: tomato; */
+    background-color:salmon;
   }
 
   .form-group{
