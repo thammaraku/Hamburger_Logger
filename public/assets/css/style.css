@@ -1,7 +1,9 @@
 li {
     padding: 5px;
     margin: 5px;
-    background: #faebd7;
+    background: yellow;
+    list-style-type: none;
+    font-size: medium;
   }
   
   .label {
@@ -17,4 +19,14 @@ li {
   .form-group {
     margin-bottom: 5px;
   }
-  
+
+  body {
+    background-color: tomato;
+  }
+
+  .form-group{
+    color: white;
+    font-size: large;
+    
+  }
+

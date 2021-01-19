@@ -1,26 +1,53 @@
-<h1>Burgers Devour List</h1>
+{{!-- <center>
+  <h1 class="text-danger">Burgers Devour List</h1>
+</center> --}}
+<br>
+<div class="container">
 
-<h2>Burgers are on the list to devour</h2>
+  <div class="row">
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devour=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+    <div class="col-6">
 
-<h2>Burgers that are already devoured!</h2>
+      <center>
+        <h3 class="text-white fw-bolder">Burgers List To Try</h3>
+      </center>
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devour=false}}
-    {{/if}}
-  {{/each}}
-</ul>
 
-<h2>Add a Burger</h2>
+      <ul>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burger-block devour=true}}
+        {{/unless}}
+        {{/each}}
+      </ul>
+
+    </div>
+
+    {{!-- <div class="col"></div> --}}
+
+    <div class="col-6">
+
+
+      <center>
+        <h3 class="text-white fw-bolder">Burgers Already Tried</h3>
+      </center>
+
+      <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burgers/burger-block devour=false}}
+        {{/if}}
+        {{/each}}
+      </ul>
+
+    </div>
+
+  </div>
+
+
+</div>
+
+{{!-- <h2>Add a Burger</h2>
 <form class="create-form">
 
   <div class="form-group">
@@ -35,4 +62,4 @@
   </div>
 
   <button type="submit">Add Burger</button>
-</form>
+</form> --}}

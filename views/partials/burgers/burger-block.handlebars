@@ -1,15 +1,20 @@
 <li>
-	{{burger_name}}
-	
-	{{#if devour}}
+	<div class="container">
+		<div class="row align-middle">
+			<div class="col-xl-8 text-success text-center font-weight-bold">
+				<h5 class="">{{burger_name}}</h5>	
+			</div>
 
-	<button class="change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
-		DEVOUR!
-	</button>
+			<button class="col-xl change-devour text-danger m-1 p-1" data-id="{{id}}"
+				data-newdevour="{{devour}}">
+				{{#if devour}}Devour!{{else}}Retry!{{/if}}
+			</button>
 
-	{{/if}}
+			{{!-- ADD DELETE BUTTON -- HIDE DATA ID UNDER DATA ATTRIBUTE WITH HANDLEBAR ID --}}
 
+			<button class="col-xl delete-burger text-danger m-1 p-1" data-id="{{this.id}}">Delete!</button>
 
-{{!-- ADD DELETE BUTTON -- HIDE DATA ID UNDER DATA ATTRIBUTE WITH HANDLEBAR ID --}}
-	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+		</div>
+	</div>
+
 </li>
