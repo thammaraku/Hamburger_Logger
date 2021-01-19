@@ -60,9 +60,9 @@ var orm = {
 
     insertOne: function (tableInput, colToAdd, valOfCol, cb) {
 
-        console.log(tableInput);
-        console.log(colToAdd);
-        console.log(valOfCol);
+        // console.log(tableInput);
+        // console.log(colToAdd);
+        // console.log(valOfCol);
 
         var queryString = "INSERT INTO " + tableInput;
 
@@ -73,11 +73,11 @@ var orm = {
         queryString += printQuestionMarks(valOfCol.length);
         queryString += ") ";
     
-        console.log(queryString);
+        // console.log(queryString);
 
         connection.query(queryString, valOfCol, function (err, result) {
             if (err) throw err;
-            console.table(result);
+            // console.table(result);
             cb(result);
         });
     },
@@ -85,9 +85,9 @@ var orm = {
 
     updateOne: function (tableInput, valOfCol, condition, cb) {
 
-        console.log(tableInput);
-        console.log(valOfCol);
-        console.log(condition);
+        // console.log(tableInput);
+        // console.log(valOfCol);
+        // console.log(condition);
 
         var queryString = "UPDATE " + tableInput;
 
@@ -96,19 +96,19 @@ var orm = {
         queryString += " WHERE ";
         queryString += condition;
     
-        console.log(queryString);
+        // console.log(queryString);
 
         connection.query(queryString, [tableInput, valOfCol, condition], function (err, result) {
             if (err) throw err;
-            console.table(result);
+            // console.table(result);
             cb(result);
         });
     },
 
     deleteOne: function (tableInput, condition, cb) {
 
-        console.log(tableInput);
-        console.log(condition);
+        // console.log(tableInput);
+        // console.log(condition);
 
         var queryString = "DELETE FROM " + tableInput;
         queryString += " WHERE ";

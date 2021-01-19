@@ -1,8 +1,5 @@
 var dotenv = require('dotenv').config();
 
-var env = process.env.NODE_ENV || "development";
-var config = require(__dirname + "/config/config.js")[env];
-
 const express = require('express');
 
 var PORT = process.env.PORT || 8080;
