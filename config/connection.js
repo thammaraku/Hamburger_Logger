@@ -1,7 +1,7 @@
 // Connect Node to MySQL and Export
 
 // Setup to connect Node to MySQL
-var mysql = require('mysql2');
+var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: "localhost",
     port: "3306",
