@@ -1,7 +1,7 @@
 # Homework 12 - Node Express Handlebars - Burger Logger
 
 ## Objective
-To create a burger logger with MySQL, Node, Express, Handlebars and ORM (yum!). Follow the MVC design pattern; use Node and MySQL to query and route data in your app, and Handlebars to generate your HTML.
+To create a burger logger with MySQL, Node, Express, Handlebars and ORM. Follow the MVC design pattern; use Node and MySQL to query and route data in your app, and Handlebars to generate your HTML.
 
 ## Acceptance Criteria
 - Whenever a user submits a burger's name, your app will display the burger on the left side of the page -- waiting to be devoured.
