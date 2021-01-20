@@ -21,7 +21,7 @@ To create a burger logger with MySQL, Node, Express, Handlebars and ORM. Follow 
 ## Application
 
 ### Github Repository URL
-https://github.com/thammaraku/burger
+https://github.com/thammaraku/homework_12_burger_logger
 
 ### Heroku Deployed Link
 https://still-coast-35905.herokuapp.com/
